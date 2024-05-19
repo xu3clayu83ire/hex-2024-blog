@@ -6,3 +6,49 @@ footer{
     background-size: cover;
 }
 
+
+
+/* ---==========---*/
+/* 標題裝飾線 */
+/* ---==========---*/
+.title-deco::before {
+    content: '';
+    display: inline-block;
+    width: 56px;
+    height: 6px;
+    background-image: url("/images/title-deco-left-sm.png");
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
+  
+  .title-deco::after {
+    content: '';
+    display: inline-block;
+    width: 56px;
+    height: 6px;
+    background-image: url("/images/title-deco-right-sm.png");
+    vertical-align: middle;
+    margin-left: 1rem;
+  }
+  
+  @include media-breakpoint-up(md) {
+    .title-deco::before {
+      content: '';
+      display: inline-block;
+      width: 100px;
+      height: 6px;
+      background-image: url("/images/title-deco-left-lg.png");
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+  
+    .title-deco::after {
+      content: '';
+      display: inline-block;
+      width: 100px;
+      height: 6px;
+      background-image: url("/images/title-deco-right-lg.png");
+      vertical-align: middle;
+      margin-left: 1rem;
+    }
+  }
