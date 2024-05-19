@@ -414,7 +414,12 @@ $spacers: (
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
+  5: $spacer * 1.75,  // 5: $spacer * 3,
+  6: $spacer * 2,
+  7: $spacer * 2.5,
+  8: $spacer * 3,
+  9: $spacer * 3.75,
+  10: $spacer * 4, //64px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -1749,3 +1754,4 @@ $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, remo
 $pre-color:                         null !default;
 
 //@import "variables-dark"; // TODO: can be removed safely in v6, only here to avoid breaking changes in v5.3
+@import "~/bootstrap/scss/variables-dark";
