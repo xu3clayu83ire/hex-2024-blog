@@ -1,35 +1,72 @@
-<script setup>
-import HelloWorld from '@/components/HelloWorld.vue';
-
-</script>
-
-<template>
-  <main class="container">
-    <div>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="@/assets/images/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
-    </div>
-    <HelloWorld msg="Vite + Vue + BS5" />
-  </main>
-</template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style>
+section {
+  margin-bottom: 80px;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+@media (min-width: 576px) {
+  section {
+    margin-bottom: 120px;
+  }
 }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+/* @media (max-width: 992px) {
+
+    section,
+    section h2 {
+      margin-bottom: 40px;
+    }
+
+  } 
+
+.work .work-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 800px;
 }
+
+
+@media (max-width: 992px) {
+
+  .work .work-bg {
+    height: 400px;
+  }
+
+}
+
+.work .work-bg.work1 {
+  background-image: url("../../src/assets/images/homepage-work1-bg.png");
+}
+
+.work .work1 img.pc {
+  object-fit: cover;
+  max-width: 714px;
+  width: 100%;
+  height: 720px;
+}
+
+.work .work1 img.mobile {
+  object-fit: cover;
+  max-width: 295px;
+  width: 100%;
+  height: 297px;
+}
+
+.work .work-bg.work2 {
+  background-image: url("../../src/assets/images/homepage-work2-lg.png");
+}
+
+.work .work-bg.work3 {
+  background-image: url("../../src/assets/images/homepage-work3-bg.png");
+}*/
 </style>
+
+
+<script setup>
+import HomeBanner from '@/components/Home/Banner.vue';
+import HomeWorks from '@/components/Home/Works.vue';
+</script>
+<template>
+  <HomeBanner />
+  <HomeWorks />
+</template>
