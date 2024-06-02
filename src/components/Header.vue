@@ -25,6 +25,7 @@ header .btn-menu-mobile>svg.active {
 </style>
 <script setup>
 import { ref, onMounted } from 'vue'
+import { RouterLink } from 'vue-router'
 onMounted(() => {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     mobileMenuBtn.addEventListener('click', (e) => {
@@ -32,24 +33,6 @@ onMounted(() => {
         mobileMenuBtn.querySelector('.close').classList.toggle("active");
     });
 
-
-
-    // const navlinks = document.querySelectorAll('a.nav-link');
-    // navlinks.forEach((item) => {
-
-    //     item.addEventListener('click', (e) => {
-    //         e.preventDefault();
-
-    //         const actives = document.querySelectorAll('span.nav-link-active');
-    //         actives.forEach((i) => {
-    //             i.classList.remove("nav-link-active");
-    //         });
-
-    //         e.target.classList.add("nav-link-active");
-    //         //location.href = e.target.parentNode.dataset.href;
-    //     });
-
-    // });
 
 });
 
@@ -81,9 +64,10 @@ onMounted(() => {
                 <div class="collapse navbar-collapse offset-lg-3" id="navbarSupportedContent">
                     <ul class="fw-semibold me-auto navbar-nav text-center text-lg-start lh-base">
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <a class="nav-link position-relative px-2 py-1 active" aria-current="page" href="/">
+                            <RouterLink class="nav-link position-relative px-2 py-1 active" aria-current="page"
+                                :to="{ name: 'index' }">
                                 <span>首頁</span>
-                            </a>
+                            </RouterLink>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
                             <a class="nav-link position-relative px-2 py-1" data-href="/">
@@ -91,7 +75,9 @@ onMounted(() => {
                             </a>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <a class="nav-link position-relative px-2 py-1" href="/service"><span>服務項目</span></a>
+                            <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'service' }">
+                                <span>服務項目</span>
+                            </RouterLink>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
                             <a class="nav-link position-relative px-2 py-1" data-href="/"><span>部落格</span></a>

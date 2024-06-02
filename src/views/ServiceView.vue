@@ -40,7 +40,7 @@ navlinks[2].querySelector('span').classList.add("nav-link-active");
         </section>
         <section class="bg-service py-80 py-sm-120">
             <div class="text-primary-50">
-                <h2 class="fs-2 fw-semibold text-center title-deco text-white">服務流程</h2>
+                <h2 class="fs-2 fw-semibold text-center title-deco text-white mb-7 mb-lg-80">服務流程</h2>
                 <div class="container">
                     <div class="d-flex justify-content-center row">
                         <div class="col-12 col-lg-6">
@@ -126,7 +126,7 @@ navlinks[2].querySelector('span').classList.add("nav-link-active");
             </div>
         </section>
         <section class="my-80 my-sm-120">
-            <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">價格表</h2>
+            <h2 class="fs-2 fw-semibold text-center text-primary-700 title-deco mb-7 mb-lg-80">價格表</h2>
             <div class="container">
                 <div class="row row-gap-4">
                     <div class="col-12 col-lg-4">
@@ -192,11 +192,11 @@ navlinks[2].querySelector('span').classList.add("nav-link-active");
             </div>
         </section>
         <section style="background-color: #FAFAFA;" class="py-80 py-sm-120">
-            <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">客戶案例</h2>
+            <h2 class="fs-2 fw-semibold text-center text-primary-700 title-deco mb-7 mb-lg-80">客戶案例</h2>
             <ServiceCase />
         </section>
         <section class="my-80 my-sm-120">
-            <h2 class=" fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">常見問題</h2>
+            <h2 class=" fs-2 fw-semibold text-center text-primary-700 title-deco mb-7 mb-lg-80">常見問題</h2>
             <div class="container">
                 <div class="row row-gap-3 justify-content-center">
                     <div class="col-12 col-lg-5">
