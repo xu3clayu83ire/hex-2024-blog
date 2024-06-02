@@ -1,26 +1,30 @@
-<style>
-    .banner img.pc {
-        object-fit: cover;
-        max-width: 1154px;
-        width: 100%;
-        height: 792px;
-    }
+<style scoped>
+.banner {
+    max-width: 1920px;
+}
 
-    .banner img.mobile {
-        object-fit: cover;
-        max-width: 375px;
-        width: 100%;
-        height: 285px;
-    }
+.banner img.pc {
+    object-fit: cover;
+    max-width: 1154px;
+    width: 100%;
+    height: 792px;
+}
+
+.banner img.mobile {
+    object-fit: cover;
+    max-width: 375px;
+    width: 100%;
+    height: 285px;
+}
 </style>
 <template>
     <section class="banner position-relative">
-        <div class="container-fluid">
+        <div class="container-fluid mx-auto">
             <div class="d-flex flex-lg-row-reverse row">
                 <div class="col-12 col-lg-8">
                     <div class="d-flex justify-content-center justify-content-lg-end">
-                        <img src="@/assets/images/hero-lg.png" class="d-none d-lg-block pc" />
-                        <img src="@/assets/images/hero-sm.png" class="d-lg-none banner mobile" />
+                        <img src="@/assets/images/Home/hero-lg.png" class="d-none d-lg-block pc" />
+                        <img src="@/assets/images/Home/hero-sm.png" class="d-lg-none banner mobile" />
                     </div>
                 </div>
                 <!-- mobile start-->

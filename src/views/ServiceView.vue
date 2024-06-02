@@ -1,64 +1,46 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
 
-    .font-tourney {
-        font-family: "Tourney", sans-serif;
-    }
+.font-tourney {
+    font-family: "Tourney", sans-serif;
+}
 
-    .bg-service {
-        /* background: linear-gradient(315deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%); */
-        background-image: url("../../src/assets/images/process-bg.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+.bg-service {
+    /* background: linear-gradient(315deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%); */
+    background-image: url("../../src/assets/images/process-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-    .bg-service-item {
-        background-image: url("../../src/assets/images/service-item-bg.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
+.bg-service-item {
+    background-image: url("../../src/assets/images/service-item-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 </style>
 
+<script setup>
+import ServiceItem from '@/components/Service/items.vue';
+import ServiceCase from '@/components/Service/cases.vue';
 
+const navlinks = document.querySelectorAll('a.nav-link');
+navlinks[2].querySelector('span').classList.add("nav-link-active");
+
+
+
+</script>
 <template>
     <div class="service">
 
-        <section class="mt-7">
-            <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">服務項目</h2>
-            <div class="container">
-                <div class="row row-gap-4">
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="bg-service-item px-6 py-4 rounded-4 text-center">
-                            <img class="mb-4" src="@/assets/images/service-item-visual.svg" alt="visual design">
-                            <h3 class="text-primary-50">平面設計</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="bg-service-item px-6 py-4 rounded-4 text-center">
-                            <img class="mb-4" src="@/assets/images/service-item-ui.svg" alt="UI design">
-                            <h3 class="text-primary-50">UI設計</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="bg-service-item px-6 py-4 rounded-4 text-center">
-                            <img class="mb-4" src="@/assets/images/service-item-html&css.svg" alt="html&css design">
-                            <h3 class="text-primary-50">切版服務</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3 ">
-                        <div class="bg-service-item px-6 py-4 rounded-4 text-center">
-                            <img class="mb-4" src="@/assets/images/service-item-front-end.svg" alt="frontend design">
-                            <h3 class="text-primary-50">前端開發</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="my-80 my-sm-120">
+            <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco mb-80">服務項目</h2>
+            <ServiceItem />
         </section>
-        <section style="margin: 120px 0" class="bg-service">
-            <div class="text-primary-50" style="padding: 120px 0">
-                <h2 class="fs-2 fw-semibold mb-7 text-center title-deco text-white">服務流程</h2>
+        <section class="bg-service py-80 py-sm-120">
+            <div class="text-primary-50">
+                <h2 class="fs-2 fw-semibold text-center title-deco text-white">服務流程</h2>
                 <div class="container">
                     <div class="d-flex justify-content-center row">
                         <div class="col-12 col-lg-6">
@@ -143,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section style="margin: 120px 0">
+        <section class="my-80 my-sm-120">
             <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">價格表</h2>
             <div class="container">
                 <div class="row row-gap-4">
@@ -209,85 +191,34 @@
                 </div>
             </div>
         </section>
-        <section style="margin: 240px 0">
+        <section style="background-color: #FAFAFA;" class="py-80 py-sm-120">
             <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">客戶案例</h2>
-            <div class="container">
-                <div class="d-flex flex-wrap gap-4 justify-content-center">
-                    <div>
-                        <img class="img-fluid mb-4 rounded-3" src="@/assets/images/work-image4.png" alt="UI設計">
-                        <div>
-                            <h3 class="text-primary-700 fs-2 fw-bold mb-2">美美美早餐店 POS 機 UI Design</h3>
-                            <p class="text-primary-500 fs-6 mb-3">訂單送單一目瞭然，自動報表分析好輕鬆</p>
-                            <div>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">UI設計</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">前端開發</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">Wix</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img class="img-fluid mb-4 rounded-3" src="@/assets/images/work-image4.png" alt="UI設計">
-                        <div>
-                            <h3 class="text-primary-700 fs-2 fw-bold mb-2">美美美早餐店 POS 機 UI Design</h3>
-                            <p class="text-primary-500 fs-6 mb-3">訂單送單一目瞭然，自動報表分析好輕鬆</p>
-                            <div>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">UI設計</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">前端開發</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">Wix</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img class="img-fluid mb-4 rounded-3" src="@/assets/images/work-image4.png" alt="UI設計">
-                        <div>
-                            <h3 class="text-primary-700 fs-2 fw-bold mb-2">美美美早餐店 POS 機 UI Design</h3>
-                            <p class="text-primary-500 fs-6 mb-3">訂單送單一目瞭然，自動報表分析好輕鬆</p>
-                            <div>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">UI設計</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">前端開發</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">Wix</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img class="img-fluid mb-4 rounded-3" src="@/assets/images/work-image4.png" alt="UI設計">
-                        <div>
-                            <h3 class="text-primary-700 fs-2 fw-bold mb-2">美美美早餐店 POS 機 UI Design</h3>
-                            <p class="text-primary-500 fs-6 mb-3">訂單送單一目瞭然，自動報表分析好輕鬆</p>
-                            <div>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">UI設計</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">前端開發</span>
-                                <span class="badge bg-primary-200 fs-6 lh-1 me-3 rounded-4 text-primary-700">Wix</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ServiceCase />
         </section>
-        <section style="margin: 240px 0">
-            <h2 class="fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco" style="margin: 120px 0">常見問題</h2>
+        <section class="my-80 my-sm-120">
+            <h2 class=" fs-2 fw-semibold mb-7 text-center text-primary-700 title-deco">常見問題</h2>
             <div class="container">
                 <div class="row row-gap-3 justify-content-center">
                     <div class="col-12 col-lg-5">
-                        <div class="border p-4 rounded-3">
+                        <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">時程很趕的話可以加快作業嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">每提早一天，只要支付總報價的 5%，我們即會視為急件為您趕工！</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-5">
-                        <div class="border p-4 rounded-3">
+                        <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">白天可以開會討論嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">每週一三五的白天，可以約定開會時間！</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-5">
-                        <div class="border p-4 rounded-3">
+                        <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">有實際開發的網站可以參考嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">請填寫表單或來信索取，部分合作有簽保密協定，無法於網路上公開喔。</p>
                         </div>
                     </div>
                     <div class="col-12 col-lg-5">
-                        <div class="border p-4 rounded-3">
+                        <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">提供比稿服務嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">只要支付費用，設計提供比稿服務，但切版與前端開發恕不提供該服務內容。</p>
                         </div>

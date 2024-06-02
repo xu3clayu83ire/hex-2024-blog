@@ -1,5 +1,5 @@
 <style>
-section {
+/* section {
   margin-bottom: 80px;
 }
 
@@ -7,7 +7,7 @@ section {
   section {
     margin-bottom: 120px;
   }
-}
+} */
 
 /* @media (max-width: 992px) {
 
@@ -64,9 +64,17 @@ section {
 
 <script setup>
 import HomeBanner from '@/components/Home/Banner.vue';
-import HomeWorks from '@/components/Home/Works.vue';
+import HomeWorks from '@/components/Home/Works/index.vue';
+import HomeServiceItem from '@/components/Home/ServiceItem.vue';
+import HomeArticle from '@/components/Home/Article.vue';
+
+const navlinks = document.querySelectorAll('a.nav-link');
+navlinks[0].querySelector('span').classList.add("nav-link-active");
+
 </script>
 <template>
   <HomeBanner />
   <HomeWorks />
+  <HomeServiceItem />
+  <HomeArticle />
 </template>

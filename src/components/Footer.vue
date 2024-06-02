@@ -14,10 +14,10 @@ footer {
 </style>
 
 <template>
-    <footer style="padding: 80px 0;">
+    <footer class="py-80 py-sm-120">
         <div class="container">
             <div class="align-items-center d-flex justify-content-between row">
-                <div class="col mb-7 mb-lg-0">
+                <div class="col mb-7 mb-lg-0 text-center text-lg-start">
                     <h2 class="mb-4">AnnA</h2>
                     <div class="fs-5 text-primary-700 mb-4 lh-base">
                         <p>若有數位產品設計和開發相關問題</p>
@@ -59,7 +59,6 @@ footer {
                             <span class="fs-5 ms-2 text-primary-700">hexschoolTW</span>
                         </div>
                     </a>
-
                 </div>
             </div>
         </div>

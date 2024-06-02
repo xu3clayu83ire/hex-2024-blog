@@ -1,5 +1,5 @@
 <style>
-.navbar-nav .nav-link.active span::before {
+.nav-link-active::before {
     --size: 8px;
     content: "";
     position: absolute;
@@ -14,7 +14,46 @@
         display: inline-block;
     }
 }
+
+header .btn-menu-mobile>svg {
+    display: none;
+}
+
+header .btn-menu-mobile>svg.active {
+    display: block;
+}
 </style>
+<script setup>
+import { ref, onMounted } from 'vue'
+onMounted(() => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    mobileMenuBtn.addEventListener('click', (e) => {
+        mobileMenuBtn.querySelector('.open').classList.toggle("active");
+        mobileMenuBtn.querySelector('.close').classList.toggle("active");
+    });
+
+
+
+    // const navlinks = document.querySelectorAll('a.nav-link');
+    // navlinks.forEach((item) => {
+
+    //     item.addEventListener('click', (e) => {
+    //         e.preventDefault();
+
+    //         const actives = document.querySelectorAll('span.nav-link-active');
+    //         actives.forEach((i) => {
+    //             i.classList.remove("nav-link-active");
+    //         });
+
+    //         e.target.classList.add("nav-link-active");
+    //         //location.href = e.target.parentNode.dataset.href;
+    //     });
+
+    // });
+
+});
+
+</script>
 
 
 <template>
@@ -25,10 +64,19 @@
                     <!-- <img src="@/assets/images/logo.svg" alt="logo"> -->
                     AnnA
                 </a>
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="material-symbols-outlined fs-1 text-primary-900">menu</span>
+                <button id="mobileMenuBtn" class="btn-menu-mobile navbar-toggler border-0 shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="material-symbols-outlined fs-1 text-primary-900">menu</span> -->
+                    <svg class="menu-icon open active" xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                    <svg class="menu-icon close" xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
                 </button>
                 <div class="collapse navbar-collapse offset-lg-3" id="navbarSupportedContent">
                     <ul class="fw-semibold me-auto navbar-nav text-center text-lg-start lh-base">
@@ -38,7 +86,7 @@
                             </a>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <a class="nav-link position-relative px-2 py-1" href="/service">
+                            <a class="nav-link position-relative px-2 py-1" data-href="/">
                                 <span>作品集</span>
                             </a>
                         </li>
@@ -46,10 +94,10 @@
                             <a class="nav-link position-relative px-2 py-1" href="/service"><span>服務項目</span></a>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <a class="nav-link position-relative px-2 py-1" href="/service"><span>部落格</span></a>
+                            <a class="nav-link position-relative px-2 py-1" data-href="/"><span>部落格</span></a>
                         </li>
                         <li class="nav-item mb-4 mb-lg-0 ">
-                            <a class="nav-link position-relative px-2 py-1" href="/service"><span>聯絡我</span></a>
+                            <a class="nav-link position-relative px-2 py-1" data-href="/"><span>聯絡我</span></a>
                         </li>
                     </ul>
                 </div>
