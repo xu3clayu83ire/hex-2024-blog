@@ -61,7 +61,8 @@
 
     .work2 .bg-mask-wrap {
         height: 800px;
-        max-width: 1920px;
+        /* max-width: 1920px; */
+        padding-left: calc(var(--bs-gutter-x)* 0.5);
         position: absolute;
         top: 0;
         left: 0;
@@ -79,7 +80,7 @@
     }
 
     .work2 .bg .pc {
-        position: relative;
+        /* position: relative; */
         display: inline;
     }
 
@@ -161,7 +162,7 @@
 
                 <img class="pc" src="@/assets/images/Home/index-work2/work2-bg-lg.png" alt="work2" srcset="">
                 <img class="mobile" src="@/assets/images/Home/index-work2/work2-bg-sm.png" alt="work2" srcset="">
-                <div class="bg-mask-wrap container">
+                <div class="bg-mask-wrap">
                     <div class="bg-mask"></div>
                 </div>
             </div>
