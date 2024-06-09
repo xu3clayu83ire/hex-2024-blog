@@ -68,9 +68,6 @@ import HomeWorks from '@/components/Home/Works/index.vue';
 import HomeServiceItem from '@/components/Home/ServiceItem.vue';
 import HomeArticle from '@/components/Home/Article.vue';
 
-const navlinks = document.querySelectorAll('a.nav-link');
-navlinks[0].querySelector('span').classList.add("nav-link-active");
-
 </script>
 <template>
   <HomeBanner />

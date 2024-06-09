@@ -24,12 +24,6 @@
 <script setup>
 import ServiceItem from '@/components/Service/items.vue';
 import ServiceCase from '@/components/Service/cases.vue';
-
-const navlinks = document.querySelectorAll('a.nav-link');
-navlinks[2].querySelector('span').classList.add("nav-link-active");
-
-
-
 </script>
 <template>
     <div class="service">

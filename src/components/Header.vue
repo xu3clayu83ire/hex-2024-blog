@@ -29,11 +29,26 @@ import { RouterLink } from 'vue-router'
 onMounted(() => {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     mobileMenuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         mobileMenuBtn.querySelector('.open').classList.toggle("active");
         mobileMenuBtn.querySelector('.close').classList.toggle("active");
     });
 
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(element => {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
 
+            //清除其他
+            navItems.forEach(el => {
+                el.querySelector('span').classList.remove("nav-link-active");
+            });
+            element.querySelector('span').classList.add("nav-link-active");
+
+        });
+    });
 });
 
 </script>
@@ -70,9 +85,9 @@ onMounted(() => {
                             </RouterLink>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <a class="nav-link position-relative px-2 py-1" data-href="/">
+                            <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'works' }">
                                 <span>作品集</span>
-                            </a>
+                            </RouterLink>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
                             <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'service' }">
