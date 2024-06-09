@@ -6,18 +6,21 @@
 }
 
 .bg-service {
+    /* 「服務流程」區塊背景的黑灰對角設計，可嘗試改用 linear-gradient 線性漸層方式來處理，因使用圖片無法達到設計稿完全對角的效果 */
+    background: linear-gradient(318deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%);
     /* background: linear-gradient(315deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%); */
-    background-image: url("../../src/assets/images/process-bg.png");
+    /* background-image: url("../../src/assets/images/process-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 
 .bg-service-item {
-    background-image: url("../../src/assets/images/service-item-bg.png");
-    background-repeat: no-repeat;
+    background: linear-gradient(330deg, #1E1E1E 0%, #1E1E1E 49.97%, #000000 50%);
+    /* background-image: url("../../src/assets/images/service-item-bg.png"); */
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 </style>
 
@@ -37,8 +40,8 @@ import ServiceCase from '@/components/Service/cases.vue';
                 <h2 class="fs-2 fw-semibold text-center title-deco text-white mb-7 mb-lg-80">服務流程</h2>
                 <div class="container">
                     <div class="d-flex justify-content-center row">
-                        <div class="col-12 col-lg-6">
-                            <div
+                        <ol class="col-12 col-lg-6">
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">1</div>
                                 <div class="ms-0 ms-md-6">
@@ -46,22 +49,22 @@ import ServiceCase from '@/components/Service/cases.vue';
                                     <p class="mb-0 fs-5 text-primary-300">透過表單或其他社群軟體與我聯絡</p>
                                     <p class="mb-4 mb-md-0 fs-5 text-primary-300">根據難易度與複雜度，後續可能需要電話/線上討論</p>
                                 </div>
-                            </div>
+                            </li>
                             <!--  -->
                             <span
                                 class="d-block fs-2 material-symbols-outlined my-4 text-center text-primary-600">arrow_downward</span>
-                            <div
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">2</div>
                                 <div class="ms-0 ms-md-6">
                                     <h3 class="text-center text-md-start text-primary-50 text-sm-start">需求釐清</h3>
                                     <p class="mb-0 fs-5 text-primary-300">透過訪談與問卷，解析客戶需求，並針對痛點給予實際建議</p>
                                 </div>
-                            </div>
+                            </li>
                             <!--  -->
                             <span
                                 class="d-block fs-2 material-symbols-outlined my-4 text-center text-primary-600">arrow_downward</span>
-                            <div
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">3</div>
                                 <div class="ms-0 ms-md-6">
@@ -69,52 +72,52 @@ import ServiceCase from '@/components/Service/cases.vue';
                                     <p class="mb-0 fs-5 text-primary-300">透過表單或其他社群軟體與我聯絡</p>
                                     <p class="mb-4 mb-md-0 fs-5 text-primary-300">根據難易度與複雜度，後續可能需要電話/線上討論</p>
                                 </div>
-                            </div>
+                            </li>
                             <!--  -->
                             <span
                                 class="d-block fs-2 material-symbols-outlined my-4 text-center text-primary-600">arrow_downward</span>
-                            <div
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">4</div>
                                 <div class="ms-0 ms-md-6">
                                     <h3 class="text-center text-md-start text-primary-50 text-sm-start">版本呈現</h3>
                                     <p class="mb-0 fs-5 text-primary-300">根據合約內容進行設計或開發</p>
                                 </div>
-                            </div>
+                            </li>
                             <!--  -->
                             <span
                                 class="d-block fs-2 material-symbols-outlined my-4 text-center text-primary-600">arrow_downward</span>
-                            <div
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">5</div>
                                 <div class="ms-0 ms-md-6">
                                     <h3 class="text-center text-md-start text-primary-50 text-sm-start">來回修正</h3>
                                     <p class="mb-0 fs-5 text-primary-300">依據合約規定之修正次數進行，次數計算以 mail 為準</p>
                                 </div>
-                            </div>
+                            </li>
                             <!--  -->
                             <span
                                 class="d-block fs-2 material-symbols-outlined my-4 text-center text-primary-600">arrow_downward</span>
-                            <div
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">6</div>
                                 <div class="ms-0 ms-md-6">
                                     <h3 class="text-center text-md-start text-primary-50 text-sm-start">終版確認</h3>
                                     <p class="mb-0 fs-5 text-primary-300">雙方同意後即為最終版</p>
                                 </div>
-                            </div>
+                            </li>
                             <!--  -->
                             <span
                                 class="d-block fs-2 material-symbols-outlined my-4 text-center text-primary-600">arrow_downward</span>
-                            <div
+                            <li
                                 class="align-items-center bg-primary-600 border border-1 border-primary-500 d-flex flex-column flex-sm-row px-6 py-4 rounded-1">
                                 <div class="display-2 font-tourney me-sm-2 text-primary-500">7</div>
                                 <div class="ms-0 ms-md-6">
                                     <h3 class="text-center text-md-start text-primary-50 text-sm-start">結案</h3>
                                     <p class="mb-0 fs-5 text-primary-300">客戶簽署驗收單，並於約定日期支付尾款</p>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -192,32 +195,32 @@ import ServiceCase from '@/components/Service/cases.vue';
         <section class="my-80 my-sm-120">
             <h2 class=" fs-2 fw-semibold text-center text-primary-700 title-deco mb-7 mb-lg-80">常見問題</h2>
             <div class="container">
-                <div class="row row-gap-3 justify-content-center">
-                    <div class="col-12 col-lg-5">
+                <ul class="row row-gap-3 justify-content-center">
+                    <li class="col-12 col-lg-5">
                         <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">時程很趕的話可以加快作業嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">每提早一天，只要支付總報價的 5%，我們即會視為急件為您趕工！</p>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-5">
+                    </li>
+                    <li class="col-12 col-lg-5">
                         <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">白天可以開會討論嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">每週一三五的白天，可以約定開會時間！</p>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-5">
+                    </li>
+                    <li class="col-12 col-lg-5">
                         <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">有實際開發的網站可以參考嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">請填寫表單或來信索取，部分合作有簽保密協定，無法於網路上公開喔。</p>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-5">
+                    </li>
+                    <li class="col-12 col-lg-5">
                         <div class="border p-4 rounded-3 h-100">
                             <p class="text-primary-700 fs-4 fw-bold mb-3">提供比稿服務嗎？</p>
                             <p class="text-primary-600 fs-5 lh-base">只要支付費用，設計提供比稿服務，但切版與前端開發恕不提供該服務內容。</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>

@@ -23,7 +23,7 @@ footer {
                         <p>若有數位產品設計和開發相關問題</p>
                         <p>歡迎填寫表單，或直接與我聯絡！</p>
                     </div>
-                    <p class="fs-5 text-primary-500">service@hexschool.com</p>
+                    <a href="service@hexschool.com" class="fs-5 text-primary-500">service@hexschool.com</a>
                 </div>
                 <div class="col-12 col-lg-3">
                     <a href="">

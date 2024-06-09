@@ -1,5 +1,5 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
 
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
@@ -17,4 +17,6 @@ import Footer from '@/components/Footer.vue';
 <style lang="scss">
 @import '~/bootstrap-icons/font/bootstrap-icons.css';
 @import '@/assets/styles/all.scss';
+
+header {}
 </style>

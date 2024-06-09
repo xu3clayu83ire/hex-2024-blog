@@ -14,7 +14,8 @@
     background-color: rgba(0, 0, 0, .6);
     background-blend-mode: multiply;
     display: none;
-    max-width: 1920px;
+    /* 「作品集」區塊的背景圖片需依設計稿改為滿版呈現 */
+    /* max-width: 1920px; */
     width: 100%;
     height: 800px;
 }

@@ -9,7 +9,10 @@ a{
 p{
   margin-bottom: 0;
 }
-
+ul , ol{
+  list-style: none;
+  padding-left: 0;
+}
 
 /* ---==========---*/
 /* 標題裝飾線 */

@@ -10,7 +10,7 @@
 /* ---===============--- */
 @media (min-width: 576px) {
     .service-item .bg {
-        background-image: url("../../src/assets/images/Home/homepage-services-bg.png");
+        background-image: url("../../assets/images/Home/homepage-services-bg.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
