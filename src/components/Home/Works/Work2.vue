@@ -60,9 +60,9 @@
 @media (min-width: 576px) {
 
     .work2 .bg-mask-wrap {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
         height: 800px;
         /* max-width: 1920px; */
-        padding-left: calc(var(--bs-gutter-x)* 0.5);
         position: absolute;
         top: 0;
         left: 0;
@@ -144,15 +144,6 @@
     .work2 .up-left .mobile {
         display: none;
     }
-}
-
-@media (min-width: 1919px) {
-
-    .work2 .bg-mask-wrap {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
 }
 </style>
 <template>
