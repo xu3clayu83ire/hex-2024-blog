@@ -21,7 +21,16 @@ npm run dev
     npm i eslint-plugin-vue --save-dev
     npm i prettier  --save-dev
     npm i sass --save-dev
-
+    npm i swiper
 ```
 
+紀錄:
+1.多行文字省略
+2.swiper 
+3.圖片處理:bg / object-fit
+4.父->子
+5.boostrap Modal/Collapse
+6.行動菜單btn icon&Collapse.hide()
+7.my all.scss & my reset
+8.common components: card/articleItem
 
