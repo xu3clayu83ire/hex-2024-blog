@@ -45,6 +45,7 @@ header .btn-menu-mobile .menu-icon>svg.active {
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import { Collapse } from 'bootstrap';
 onMounted(() => {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     mobileMenuBtn.addEventListener('click', (e) => {
@@ -60,10 +61,25 @@ onMounted(() => {
 
             //清除其他
             navItems.forEach(el => {
-                el.querySelector('span').classList.remove("nav-link-active");
+                el.querySelector('a.nav-link>span').classList.remove("nav-link-active");
             });
-            element.querySelector('span').classList.add("nav-link-active");
+            element.querySelector('a.nav-link>span').classList.add("nav-link-active");
 
+            //行動-關閉菜單
+            const mobileMenu = document.getElementById('navbarSupportedContent');
+            const isMobileMenuShow = mobileMenu.classList.contains('show');
+            if (isMobileMenuShow) {
+                //var bsCollapse = new Collapse(mobileMenu);
+                //bsCollapse.hide();
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                mobileMenuBtn.click();
+            }
+
+            //導頁
+            const _href = element.querySelector('a.nav-link').dataset.href;
+            if (_href.length > 0) {
+                location.href = location.origin + '/hex-2024-camp/#/' + _href;
+            }
         });
     });
 });
@@ -98,28 +114,29 @@ onMounted(() => {
                 <div class="collapse navbar-collapse offset-lg-3" id="navbarSupportedContent">
                     <ul class="fw-semibold me-auto navbar-nav text-center text-lg-start lh-base">
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <RouterLink class="nav-link position-relative px-2 py-1 active" aria-current="page"
-                                :to="{ name: 'index' }">
+                            <a class="nav-link position-relative px-2 py-1 active pointer" data-href="index">
                                 <span>首頁</span>
-                            </RouterLink>
+                            </a>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'works' }">
+                            <a class="nav-link position-relative px-2 py-1 pointer" data-href="works">
                                 <span>作品集</span>
-                            </RouterLink>
+                            </a>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'service' }">
+                            <a class="nav-link position-relative px-2 py-1 pointer" data-href="service">
                                 <span>服務項目</span>
-                            </RouterLink>
+                            </a>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'blog' }">
+                            <a class="nav-link position-relative px-2 py-1 pointer" data-href="blog">
                                 <span>部落格</span>
-                            </RouterLink>
+                            </a>
                         </li>
                         <li class="nav-item mb-4 mb-lg-0 ">
-                            <a class="nav-link position-relative px-2 py-1" data-href="/"><span>聯絡我</span></a>
+                            <a class="nav-link position-relative px-2 py-1 pointer" data-href="">
+                                <span>聯絡我</span>
+                            </a>
                         </li>
                     </ul>
                 </div>

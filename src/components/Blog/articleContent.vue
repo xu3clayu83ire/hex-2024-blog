@@ -97,7 +97,7 @@ import playstationVr from '@/assets/images/blog/contents/article4/playstation-vr
 }
 
 .article-content .content div.text {
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .article-content .content p.title {
@@ -114,6 +114,10 @@ import playstationVr from '@/assets/images/blog/contents/article4/playstation-vr
 
     .article-content .content>div {
         margin-bottom: 40px;
+    }
+
+    .article-content .content div.text {
+        font-size: 1.25rem;
     }
 
 }
