@@ -1,7 +1,7 @@
 <script setup>
-import Work1 from '@/components/Home/Works/Work1.vue';
-import Work2 from '@/components/Home/Works/Work2.vue';
-import Work3 from '@/components/Home/Works/Work3.vue';
+import Work1 from '@/components/Home/Works/work1.vue';
+import Work2 from '@/components/Home/Works/work2.vue';
+import Work3 from '@/components/Home/Works/work3.vue';
 </script>
 <template>
     <section class="mt-80 mt-sm-120">

@@ -2,6 +2,8 @@ import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router
 import HomeView from '../views/HomeView.vue'
 import ServiceView from '../views/ServiceView.vue'
 import WorksView from '../views/WorksView.vue'
+import BlogView from '@/views/BlogView.vue'
+import BlogContentView from '@/views/BlogContentView.vue'
 
 const router = createRouter({
   //history: createWebHistory('/hex-2024-camp/'),
@@ -21,6 +23,16 @@ const router = createRouter({
       path: '/works',
       name: 'works',
       component: WorksView
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: BlogView
+    },
+    {
+      path: '/blogContent',
+      name: 'blogContent',
+      component: BlogContentView
     }
   ]
 })

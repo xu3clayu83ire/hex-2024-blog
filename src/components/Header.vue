@@ -114,7 +114,9 @@ onMounted(() => {
                             </RouterLink>
                         </li>
                         <li class="me-0 me-lg-8 nav-item mb-4 mb-lg-0">
-                            <a class="nav-link position-relative px-2 py-1" data-href="/"><span>部落格</span></a>
+                            <RouterLink class="nav-link position-relative px-2 py-1" :to="{ name: 'blog' }">
+                                <span>部落格</span>
+                            </RouterLink>
                         </li>
                         <li class="nav-item mb-4 mb-lg-0 ">
                             <a class="nav-link position-relative px-2 py-1" data-href="/"><span>聯絡我</span></a>
