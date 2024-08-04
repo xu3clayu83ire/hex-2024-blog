@@ -3,7 +3,7 @@
 
 ```
 npm init -y
-npm create vite@lates
+npm create vite@latest
 npm install
 npm run dev
 
